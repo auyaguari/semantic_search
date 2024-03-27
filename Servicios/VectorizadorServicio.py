@@ -8,9 +8,9 @@ class Vectorizador():
     __modelo = None
     __device = None
     __tokenizer = None
-    def __init__(self, modelo, device, tokenizer):
+    def __init__(self, modelo, tokenizer):
         
-        self.__device = device
+        self.__device =  "cuda:0" if torch.cuda.is_available() else "cpu"
         newmodel = torch.load(modelo)
         self.__tokenizer = AutoTokenizer.from_pretrained(tokenizer)
         self.__modelo = newmodel.bert
