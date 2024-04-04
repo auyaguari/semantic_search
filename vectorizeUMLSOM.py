@@ -2,7 +2,7 @@ from sentence_transformers import SentenceTransformer
 import torch
 from transformers import AutoTokenizer
 from transformers import AutoModel
-from DAO.DAOCorpus import DAOCorpus
+
 #model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 #model = SentenceTransformer('GanjinZero/UMLSBert_ENG')
 newmodel = torch.load('output/last_model.pth')
