@@ -5,7 +5,7 @@ from transformers import AutoModel
 
 #model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 #model = SentenceTransformer('GanjinZero/UMLSBert_ENG')
-newmodel = torch.load('output/last_model.pth')
+newmodel = torch.load('../output/last_model.pth')
 tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/paraphrase-multilingual-mpnet-base-v2')
 model = newmodel.bert
 import pandas as pd
